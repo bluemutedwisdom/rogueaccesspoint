@@ -10,7 +10,7 @@
 ###############################################################################
 ## Author : Harald van der Laan                                              ##
 ## Date   : 2014 / 11 / 26                                                   ##
-## Version: v0.1.4                                                     (HLA) ##
+## Version: v0.1.5                                                     (HLA) ##
 ###############################################################################
 ## Requirements:                                                             ##
 ## + Hardware                                                                ##
@@ -31,11 +31,12 @@
 ## - v0.1.2  (Added longer sleeps because of at0 errors)               (HLA) ##
 ## - v0.1.3  (Added extra output)                                      (HLA) ##
 ## - v0.1.4  (Changed MTU to 1500)                                     (HLA) ##
+## - v0.1.5  (Changed location of dhcpd config file)                   (HLA) ##
 ###############################################################################
 
 ## Global setting
 ###############################################################################
-version="v0.1.4"
+version="v0.1.5"
 
 cred="\033[1;31m"	# Color red.
 cgreen="\033[1;32m"	# Color green.
@@ -116,7 +117,7 @@ echo -e "[ ${cgreen}Done${creset} ]: Setting up firewall rules and at0 device."
 
 ## Starting isc-dhcp-server
 echo "[ ]: Staring isc-dhcp-server."
-dhcpd -cf dhcpd.conf -pf /var/run/dhcpd.pid at0 &> /dev/null
+dhcpd -cf config/dhcpd.conf -pf /var/run/dhcpd.pid at0 &> /dev/null
 sleep 3
 /etc/init.d/isc-dhcp-server start &> /dev/null
 echo -e "[ ${cgreen}Done${creset} ]: Isc-dhcp-server started."
