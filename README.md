@@ -27,4 +27,4 @@ These packages are default installed in [Kali Linux](https://www.kali.org/).
 
 This script is for educational purposes and penetration testing purposes only. The creator of
 this script is in no way responsible for the action of the user. And can not held accountable for
-any damage to this or an other's system.
+any damage to his or an other's system.
