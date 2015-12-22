@@ -72,7 +72,7 @@ if [ ${UID} -ne 0 ]; then
 	exit 1
 fi
 
-if [ ! -f dhcpd.conf ]; then
+if [ ! -f config/dhcpd.conf ]; then
 	# File dhcpd.conf is not found
 	echo -e "[ ${cred}Error${creset} ]: Could not find dhcpd.conf."
 	echo -e "[ ${cred}Error${creset} ]: Please place a default dhcpd.conf in the working directory."
